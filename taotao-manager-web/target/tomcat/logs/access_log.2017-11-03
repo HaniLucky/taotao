@@ -1,0 +1,3 @@
+127.0.0.1 - - [03/Nov/2017:21:33:53 +0800] "GET / HTTP/1.1" 404 951 http-bio-8080-exec-1 67
+127.0.0.1 - - [03/Nov/2017:21:33:53 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-2 2
+127.0.0.1 - - [03/Nov/2017:21:34:00 +0800] "GET /rest/test/date HTTP/1.1" 200 21 http-bio-8080-exec-3 738
