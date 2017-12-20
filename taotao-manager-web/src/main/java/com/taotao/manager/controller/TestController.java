@@ -12,13 +12,19 @@ import com.taotao.manager.service.TestService;
 @RequestMapping("test")
 public class TestController {
 	
-	@Autowired
-	private TestService TestService;
+	//@Autowired
+	//private TestService TestService;
 	
-	@RequestMapping("date")
-	@ResponseBody
-	public String queryDate(){
-		return this.TestService.queryDate();
+//	@RequestMapping("date")
+//	@ResponseBody
+//	public String queryDate(){
+//		System.err.println("请求进来了...");
+//		//return this.TestService.queryDate();
+//	}
+	
+	@RequestMapping("t")
+	public void t(){
+		System.err.println("请求进来了");
 	}
 
 }
