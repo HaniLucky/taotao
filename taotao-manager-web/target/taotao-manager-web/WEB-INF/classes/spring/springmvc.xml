@@ -26,10 +26,12 @@
 	<dubbo:application name="taotao-manager-web" />
 
 	<!-- 使用广播 -->
-	<dubbo:registry address="multicast://224.5.6.7:1234" />
-
-	<!-- 声明要调用的服务，timeout是设置连接超时最长时间,如果不设置，默认一秒超时，重试3次 -->
+	<!-- <dubbo:registry address="multicast://224.5.6.7:1234" />
+	<dubbo:registry address="192.168.65.130:2181" />
+	本地
+	<dubbo:registry address="127.0.0.1:2181" />
+	声明要调用的服务，timeout是设置连接超时最长时间,如果不设置，默认一秒超时，重试3次
 	<dubbo:reference interface="com.taotao.manager.service.TestService"
-		id="testService" timeout="1000000" />
+		id="testService" timeout="1000000" /> -->
 
 </beans>
