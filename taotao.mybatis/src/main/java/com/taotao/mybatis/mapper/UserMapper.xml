@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.taotao.mybatis.mapper.UserMapper">
+
+	<!-- 根据id查询用户 -->
+	<select id="queryUserById" parameterType="long" resultType="user">
+		SELECT * FROM `user` WHERE id=#{id}
+	</select>
+
+	<!-- 新增 -->
+	<insert id="saveUser" useGeneratedKeys="true" keyColumn="id"
+		keyProperty="id">
+		INSERT INTO `user`
+		(
+		`user_name`,
+		`password`,
+		`name`,
+		`age`,
+		`sex`,
+		`birthday`,
+		`created`,
+		`updated`
+		)
+		VALUES
+		(
+		#{userName},
+		#{password},
+		#{name},
+		#{age},
+		#{sex},
+		#{birthday},
+		NOW(),
+		NOW()
+		)
+	</insert>
+
+	<!-- 更新 -->
+	<update id="updateUserById">
+		UPDATE `user`
+		SET
+		`user_name` = #{userName},
+		`password`
+		= #{password},
+		`name` = #{name},
+		`age` = #{age},
+		`sex` = #{sex},
+		`birthday` = #{birthday},
+		`updated` = NOW()
+		WHERE
+		(`id` = #{id});
+	</update>
+
+	<!-- 根据id删除 -->
+	<delete id="deleteUserById">
+		DELETE FROM `user` WHERE id=#{id}
+	</delete>
+
+</mapper>
