@@ -16,7 +16,7 @@ import com.taotao.manager.service.ItemCatService;
  * 注解说明:
  * 
  * @PathVariable PathVariable是用来对指定请求的URL路径里面的变量 {page}
- * @RequestParam get请求参数
+ * @RequestParam get请求参数   rows 前端传入的参数名
  * @ResponseBody 以json字符串返回
  *
  */
