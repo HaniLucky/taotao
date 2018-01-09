@@ -29,7 +29,8 @@
 	<dubbo:registry address="zookeeper://192.168.65.130:2181" />
 	
 	<!-- 声明要调用的服务，timeout是设置连接超时最长时间,如果不设置，默认一秒超时，重试3次 -->
-	<dubbo:reference interface="com.taotao.manager.service.TestService"
-		id="testService" timeout="1000000" /> 
+	<dubbo:reference interface="com.taotao.manager.service.TestService" id="testService" timeout="1000000" /> 
+	<dubbo:reference interface="com.taotao.manager.service.ItemCatService" id="itemCatService" timeout="1000000" /> 
+	
 
 </beans>
