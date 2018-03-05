@@ -11,8 +11,17 @@ import com.taotao.manager.pojo.ItemCat;
 import com.taotao.manager.service.ItemCatService;
 
 @Service
-public class ItemCarServiceImpl implements ItemCatService {
+public class ItemCarServiceImpl extends BaseServiceImpl<ItemCat> implements ItemCatService {
 
+	@Override
+	public List<ItemCat> queryItemCatByParentId(Long parentId) {
+		ItemCat param = new ItemCat();
+		param.setParentId(parentId);
+		List<ItemCat> list = super.queryListByWhere(param);
+		return list;
+	}
+
+	/*
 	@Autowired
 	private ItemCatMapper itemCatMapper;
 
@@ -25,5 +34,6 @@ public class ItemCarServiceImpl implements ItemCatService {
 
 		return list;
 	}
+	*/
 
 }

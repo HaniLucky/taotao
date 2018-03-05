@@ -2,7 +2,14 @@ package com.taotao.manager.pojo;
 
 import java.io.Serializable;
 import java.util.Date;
-
+/**
+ *  BasePojo
+ *	抽取共用的属性
+ *	不希望直接创建实例，加上abstract
+ *
+ * @author Covet
+ *
+ */
 public abstract class BasePojo  implements Serializable {
 
 	// 创建时间

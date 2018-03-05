@@ -1,6 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<description>聚合工程</description>
 	<!-- 父工程相关信息 -->
 	<parent>
 		<groupId>com.taotao</groupId>
@@ -31,7 +32,7 @@
 				<artifactId>tomcat7-maven-plugin</artifactId>
 				<configuration>
 					<!-- http://127.0.0.1:${port}/${path} -->
-					<port>80</port>
+					<port>8080</port>
 					<path>/</path>
 				</configuration>
 			</plugin>

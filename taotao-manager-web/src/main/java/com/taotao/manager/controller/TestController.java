@@ -13,6 +13,11 @@ public class TestController {
 	@Autowired
 	private TestService TestService;
 	
+	/**
+	 * 测试程序是否可用,连接数据库是否可用
+	 * URL:http://127.0.0.1:8080/rest/test/date
+	 * @return
+	 */
 	@RequestMapping("date")
 	@ResponseBody
 	public String queryDate(){
@@ -20,9 +25,6 @@ public class TestController {
 		return this.TestService.queryDate();
 	}
 	
-	@RequestMapping("t")
-	public void t(){
-		System.err.println("请求进来了");
-	}
+	
 
 }

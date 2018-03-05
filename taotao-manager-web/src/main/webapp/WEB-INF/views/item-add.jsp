@@ -137,12 +137,18 @@
    			    closed:true,
    			    iconCls:'icon-save',
    			    title:'选择类目',
+   			    // 当窗口打开后执行的逻辑
    			    onOpen : function(){
+   			    	// 这里的this是打开的窗口
    			    	var _win = this;
+   			    	// 在窗口范围内，搜索ui标签
+   			    	// 找到ui标签，并创建EasyUi树
    			    	$("ul",_win).tree({
+   			    		// 发起请求，创建树
    			    		url:'/rest/item/cat',
    			    		method:'GET',
    			    		animate:true,
+   			    		// 给树上的说有节点添加单击事件
    			    		onClick : function(node){
    			    			if($(this).tree("isLeaf",node.target)){
    			    				// 填写到cid中

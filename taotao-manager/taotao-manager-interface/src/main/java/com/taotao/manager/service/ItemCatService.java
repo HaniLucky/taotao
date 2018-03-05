@@ -4,7 +4,14 @@ import java.util.List;
 
 import com.taotao.manager.pojo.ItemCat;
 
-public interface ItemCatService {
+public interface ItemCatService extends BaseService<ItemCat>{
+
+	/**
+	 * 类目查询
+	 * @param parentId
+	 * @return
+	 */
+	List<ItemCat> queryItemCatByParentId(Long parentId);
 	
 
 	/**
@@ -13,5 +20,5 @@ public interface ItemCatService {
 	 * @param rows	展示几条记录
 	 * @return
 	 */
-	List<ItemCat> queryItemCatByPage(Integer page ,Integer rows);
+	// List<ItemCat> queryItemCatByPage(Integer page ,Integer rows);
 }

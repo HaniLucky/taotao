@@ -1,1 +1,3 @@
+com\taotao\manager\service\impl\BaseServiceImpl.class
+com\taotao\manager\service\impl\ItemCarServiceImpl.class
 com\taotao\manager\service\impl\TestServiceImpl.class
