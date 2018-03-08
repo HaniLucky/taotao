@@ -36,7 +36,10 @@
 	        </tr>
 	        <tr>
 	            <td>商品价格:</td>
-	            <td><input class="easyui-numberbox" type="text" name="priceView" data-options="min:1,max:99999999,precision:2,required:true" />
+	            <td>
+	            	<!-- 前端显示 -->
+	            	<input class="easyui-numberbox" type="text" name="priceView" data-options="min:1,max:99999999,precision:2,required:true" />
+	            	<!-- 提交后台 -->
 	            	<input type="hidden" name="price"/>
 	            </td>
 	        </tr>
